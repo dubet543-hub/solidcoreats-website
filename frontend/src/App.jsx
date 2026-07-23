@@ -189,7 +189,7 @@ export default function App() {
         {/* ═══════════ PRODUCT ═══════════ */}
         <section className="shell sect" id="product">
           <Reveal className="sect-head">
-            <span className="kicker">01 — Flagship Product</span>
+            <span className="kicker">01 — Flagship App</span>
             <h2>
               Solidcore <em>AMS</em>
             </h2>
@@ -294,7 +294,7 @@ export default function App() {
               </p>
             </div>
             <Reveal className="appcta-art" variant="scale" delay={140}>
-              <Logo size={130} wordmark={false} animated />
+              <Logo size={150} lockup />
             </Reveal>
           </Reveal>
         </section>
