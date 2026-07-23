@@ -981,6 +981,12 @@
    responsive
    ============================================================ */
 @media (max-width: 960px) {
+  /* sideways entrances have no room to travel on narrow screens */
+  .reveal--left,
+  .reveal--right {
+    transform: translateY(30px);
+  }
+
   .hero-grid,
   .split,
   .appcta,
