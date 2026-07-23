@@ -36,8 +36,14 @@ const TEAM = [
     name: 'Tushar Dube',
     initials: 'TD',
     role: 'Chief Technical Officer',
-    bio: 'Leads technology and engineering for SOLIDCORE AMS — the athlete mobile app across iOS and Android, the admin dashboard used by coaches and support staff, and the data platform behind them.',
-    tags: ['Platform Architecture', 'Athlete App (iOS & Android)', 'Admin Dashboard'],
+    bio: 'Covers both build and growth for SOLIDCORE — web and mobile app development across iOS and Android, alongside digital marketing, sales and paid advertising.',
+    tags: [
+      'Web Development',
+      'App Development',
+      'Digital Marketing',
+      'Sales',
+      'Ads Strategy',
+    ],
   },
 ];
 
