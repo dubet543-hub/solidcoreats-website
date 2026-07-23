@@ -396,7 +396,7 @@
   letter-spacing: 0.2em;
   color: var(--steel-dim);
 }
-.pillar h3 {
+.pillar h2 {
   font-size: 1.22rem;
   margin: 12px 0 11px;
 }
@@ -437,7 +437,7 @@
 .line-item:first-child {
   padding-top: 0;
 }
-.line-item h4 {
+.line-item h3 {
   font-size: 1.06rem;
   margin-bottom: 7px;
   color: var(--cyan);
@@ -1034,7 +1034,7 @@
   flex-direction: column;
   gap: 11px;
 }
-.ftr-col h5 {
+.ftr-col h2 {
   font-size: 0.73rem;
   letter-spacing: 0.18em;
   text-transform: uppercase;

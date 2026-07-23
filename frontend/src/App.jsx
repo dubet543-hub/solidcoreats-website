@@ -204,7 +204,7 @@ export default function App() {
             {cat('pillar').map((f, i) => (
               <Reveal className="pillar" key={f.key} delay={i * 110}>
                 <span className="pillar-idx">{String(i + 1).padStart(2, '0')}</span>
-                <h3>{f.title}</h3>
+                <h2>{f.title}</h2>
                 <p>{f.description}</p>
                 <i className="pillar-rule" />
               </Reveal>
@@ -232,7 +232,7 @@ export default function App() {
             <div className="split-copy">
               {cat('ecosystem').map((f, i) => (
                 <Reveal className="line-item" key={f.key} delay={i * 100} variant="right">
-                  <h4>{f.title}</h4>
+                  <h3>{f.title}</h3>
                   <p>{f.description}</p>
                 </Reveal>
               ))}
@@ -458,7 +458,7 @@ export default function App() {
           </div>
 
           <div className="ftr-col">
-            <h5>Explore</h5>
+            <h2>Explore</h2>
             {NAV.map(([id, l]) => (
               <a key={id} href={`#${id}`}>
                 {l}
@@ -467,7 +467,7 @@ export default function App() {
           </div>
 
           <div className="ftr-col">
-            <h5>Contact</h5>
+            <h2>Contact</h2>
             <a href={`mailto:${SUPPORT_EMAIL}`}>{SUPPORT_EMAIL}</a>
             <a href={`tel:${CONTACT_PHONE}`}>{CONTACT_PHONE_DISPLAY}</a>
             <a href={SITE_URL} target="_blank" rel="noreferrer">

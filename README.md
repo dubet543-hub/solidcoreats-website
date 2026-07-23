@@ -132,6 +132,31 @@ frontend/
     App.jsx
 ```
 
+### Sections
+
+Hero · Mission & pillars · 01 Flagship App · 02 Platform Capabilities · 03 Value Proposition ·
+04 Plans · 05 Athlete App · 06 Promoter & team · 07 Contact · Footer
+
+Plans are a tabbed switcher ([Plans.jsx](frontend/src/components/Plans.jsx)); the Bio-Lab plan is a
+superset of the Optimisation plan, so shared items render once under "everything above, plus".
+Prices and features live in the `PLANS` array.
+
+Contact details (support email, phone) are in
+[constants.js](frontend/src/constants.js) and render in both the contact section and the footer.
+
+### Responsive
+
+| Breakpoint | Behaviour |
+| ---------- | --------- |
+| `<=1180` laptop | narrower gutters, denser capability grid |
+| `<=960` tablet | layouts stack, promoter card reflows |
+| `<=860` | nav collapses behind a burger menu |
+| `<=640` mobile | single column, full-width buttons, tighter padding |
+
+Verified: no horizontal overflow at 500/768/1024/1440, and heading levels run without skips.
+Note Chrome headless clamps to a 500px minimum window, so true phone widths (375-430px) still
+warrant a check on a real device.
+
 ### Artwork
 
 Every illustration in [art.jsx](frontend/src/components/art.jsx) draws real AMS subject matter
