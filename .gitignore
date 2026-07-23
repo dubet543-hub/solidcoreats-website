@@ -1,0 +1,23 @@
+# dependencies
+node_modules/
+
+# builds
+dist/
+dist-ssr/
+
+# env — real values stay local; see .env.example in each package
+.env
+.env.local
+.env.*.local
+
+# logs
+*.log
+npm-debug.log*
+logs/
+
+# os / editor
+.DS_Store
+.idea/
+.vscode/*
+!.vscode/extensions.json
+*.swp
