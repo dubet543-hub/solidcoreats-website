@@ -73,27 +73,45 @@ export function CountUp({ value, suffix = '', duration = 1400 }) {
 
     let raf = null;
     let timer = null;
+    let started = false;
+
+    const run = () => {
+      if (started) return;
+      started = true;
+
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        return setN(value);
+      }
+
+      const t0 = performance.now();
+      const tick = (t) => {
+        const p = Math.min((t - t0) / duration, 1);
+        setN(Math.round(value * (1 - Math.pow(1 - p, 3))));
+        if (p < 1) raf = requestAnimationFrame(tick);
+      };
+      raf = requestAnimationFrame(tick);
+
+      // Guarantee the final value even if rAF is throttled (background tab,
+      // headless capture) — the number must never be left mid-count.
+      timer = setTimeout(() => setN(value), duration + 120);
+    };
+
+    // Already on screen at mount? Start now — waiting on the observer alone
+    // can leave the figure stuck at zero.
+    const rect = el.getBoundingClientRect();
+    if (rect.top < window.innerHeight && rect.bottom > 0) run();
+
+    if (typeof IntersectionObserver === 'undefined') {
+      run();
+      return;
+    }
 
     const io = new IntersectionObserver(
       ([entry]) => {
-        if (!entry.isIntersecting) return;
-        io.unobserve(el);
-
-        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-          return setN(value);
+        if (entry.isIntersecting) {
+          io.unobserve(el);
+          run();
         }
-
-        const t0 = performance.now();
-        const tick = (t) => {
-          const p = Math.min((t - t0) / duration, 1);
-          setN(Math.round(value * (1 - Math.pow(1 - p, 3))));
-          if (p < 1) raf = requestAnimationFrame(tick);
-        };
-        raf = requestAnimationFrame(tick);
-
-        // Guarantee the final value even if rAF is throttled (background tab,
-        // headless capture) — the number must never be left mid-count.
-        timer = setTimeout(() => setN(value), duration + 120);
       },
       { threshold: 0.4 }
     );

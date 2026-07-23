@@ -37,6 +37,7 @@ const TEAM = [
     initials: 'TD',
     role: 'Chief Technical Officer',
     bio: 'Covers both build and growth for SOLIDCORE — web and mobile app development across iOS and Android, alongside digital marketing, sales and paid advertising.',
+    experience: { value: '3 years', label: 'in digital marketing, app and web development' },
     tags: [
       'Web Development',
       'App Development',
@@ -72,6 +73,7 @@ function ScrollSpine() {
 export default function App() {
   const [features, setFeatures] = useState([]);
   const [err, setErr] = useState(null);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     getFeatures()
@@ -88,20 +90,36 @@ export default function App() {
     <>
       <ScrollSpine />
 
-      <header className="hdr">
-        <a href="#top" className="hdr-brand">
+      <header className={`hdr ${menuOpen ? 'is-open' : ''}`}>
+        <a href="#top" className="hdr-brand" onClick={() => setMenuOpen(false)}>
           <Logo size={34} animated />
         </a>
-        <nav className="hdr-nav">
+
+        <nav className="hdr-nav" id="site-nav">
           {NAV.map(([id, l]) => (
-            <a key={id} href={`#${id}`}>
+            <a key={id} href={`#${id}`} onClick={() => setMenuOpen(false)}>
               {l}
             </a>
           ))}
         </nav>
-        <a className="btn btn--sm" href="#contact">
+
+        <a className="btn btn--sm hdr-cta" href="#contact">
           Request Access
         </a>
+
+        {/* below the nav breakpoint the links collapse behind this toggle */}
+        <button
+          type="button"
+          className="hdr-burger"
+          aria-label={menuOpen ? 'Close menu' : 'Open menu'}
+          aria-expanded={menuOpen}
+          aria-controls="site-nav"
+          onClick={() => setMenuOpen((o) => !o)}
+        >
+          <span />
+          <span />
+          <span />
+        </button>
       </header>
 
       <main id="top">
@@ -377,6 +395,12 @@ export default function App() {
                   <h4>{m.name}</h4>
                   <p className="member-role">{m.role}</p>
                   <p className="member-bio">{m.bio}</p>
+                  {m.experience && (
+                    <p className="member-exp">
+                      <b>{m.experience.value}</b>
+                      <span>{m.experience.label}</span>
+                    </p>
+                  )}
                   <ul className="member-tags">
                     {m.tags.map((t) => (
                       <li key={t}>{t}</li>
