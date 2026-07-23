@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import Logo from './components/Logo';
 import Reveal, { CountUp } from './components/Reveal';
 import ContactForm from './components/ContactForm';
+import Plans from './components/Plans';
 import {
   HeroVisual,
   ACWRGauge,
@@ -20,6 +21,7 @@ const NAV = [
   ['product', 'Product'],
   ['intelligence', 'Intelligence'],
   ['hub', 'The Hub'],
+  ['plans', 'Plans'],
   ['app', 'Get the App'],
   ['promoter', 'Promoter'],
   ['contact', 'Contact'],
@@ -267,11 +269,27 @@ export default function App() {
           </div>
         </section>
 
+        {/* ═══════════ PLANS ═══════════ */}
+        <section className="shell sect" id="plans">
+          <Reveal className="sect-head">
+            <span className="kicker">04 — Plans</span>
+            <h2>Choose your level of support</h2>
+            <p className="sect-lede">
+              Both plans run on Solidcore AMS. The Bio-Lab plan adds full biomechanical
+              assessment on top of everything in the Optimisation plan.
+            </p>
+          </Reveal>
+
+          <Reveal delay={80}>
+            <Plans />
+          </Reveal>
+        </section>
+
         {/* ═══════════ APP / STORES ═══════════ */}
         <section className="shell sect" id="app">
           <Reveal className="appcta">
             <div className="appcta-copy">
-              <span className="kicker">04 — Athlete App</span>
+              <span className="kicker">05 — Athlete App</span>
               <h2>
                 Solidcore AMS is <em>coming soon</em> to mobile
               </h2>
@@ -302,7 +320,7 @@ export default function App() {
         {/* ═══════════ PROMOTER ═══════════ */}
         <section className="shell sect" id="promoter">
           <Reveal className="sect-head">
-            <span className="kicker">05 — About the Promoter</span>
+            <span className="kicker">06 — About the Promoter</span>
             <h2>Built by a practitioner</h2>
           </Reveal>
 
@@ -367,7 +385,7 @@ export default function App() {
         {/* ═══════════ CONTACT ═══════════ */}
         <section className="shell sect" id="contact">
           <Reveal className="sect-head">
-            <span className="kicker">06 — Explore the Ecosystem</span>
+            <span className="kicker">07 — Explore the Ecosystem</span>
             <h2>Power your training with SOLIDCORE</h2>
             <p className="sect-lede">
               Tell us about your squad and we'll get you set up — or reach us directly.

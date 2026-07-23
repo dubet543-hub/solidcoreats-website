@@ -689,6 +689,129 @@
   margin-bottom: 0;
 }
 
+/* ---------- plans (tabbed) ---------- */
+.plantabs {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 22px;
+}
+.plantab {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+  padding: 15px 26px;
+  border: 1px solid var(--edge);
+  border-radius: var(--r);
+  background: rgba(13, 20, 28, 0.6);
+  color: var(--slate);
+  cursor: pointer;
+  transition: border-color 0.25s, background 0.25s, color 0.25s, transform 0.25s var(--ease);
+}
+.plantab:hover {
+  border-color: var(--edge-hot);
+  color: var(--chrome);
+}
+.plantab.is-active {
+  border-color: rgba(79, 214, 232, 0.55);
+  background: linear-gradient(150deg, rgba(29, 139, 166, 0.22), rgba(13, 20, 28, 0.9));
+  color: var(--chrome);
+  transform: translateY(-2px);
+}
+.plantab:focus-visible {
+  outline: 2px solid var(--cyan);
+  outline-offset: 3px;
+}
+.plantab-name {
+  font-weight: 700;
+  font-size: 0.98rem;
+}
+.plantab-price {
+  font-size: 0.8rem;
+  color: var(--steel-dim);
+}
+.plantab.is-active .plantab-price {
+  color: var(--cyan);
+}
+
+.planpanel {
+  padding: clamp(26px, 4vw, 42px);
+  border: 1px solid var(--edge);
+  border-radius: var(--r-lg);
+  background: linear-gradient(150deg, var(--carbon-2), var(--carbon));
+  animation: tickerUp 0.42s var(--ease);
+}
+.planpanel-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 22px;
+  flex-wrap: wrap;
+  padding-bottom: 22px;
+  border-bottom: 1px solid var(--edge);
+  margin-bottom: 24px;
+}
+.planpanel-head h3 {
+  font-size: clamp(1.3rem, 2.6vw, 1.8rem);
+}
+.plan-blurb {
+  color: var(--slate);
+  margin-top: 8px;
+  max-width: 52ch;
+  font-size: 0.95rem;
+}
+.plan-price b {
+  font-size: clamp(1.7rem, 3.4vw, 2.3rem);
+  font-weight: 800;
+  color: var(--cyan);
+  white-space: nowrap;
+}
+
+.plan-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 12px 24px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.plan-list li {
+  position: relative;
+  padding-left: 26px;
+  color: var(--chrome);
+  font-size: 0.95rem;
+}
+.plan-list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 13px;
+  height: 7px;
+  border-left: 2px solid var(--cyan);
+  border-bottom: 2px solid var(--cyan);
+  transform: rotate(-45deg);
+}
+.plan-list--extra li::before {
+  border-color: var(--lime, #7fdc6b);
+}
+
+.plan-divider {
+  display: block;
+  margin: 26px 0 16px;
+  padding-top: 20px;
+  border-top: 1px dashed var(--edge-hot);
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #7fdc6b;
+}
+
+.plan-cta {
+  margin-top: 30px;
+}
+
 /* ---------- team ---------- */
 .team {
   display: grid;
