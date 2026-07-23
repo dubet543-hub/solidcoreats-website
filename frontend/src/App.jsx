@@ -18,7 +18,7 @@ import { SUPPORT_EMAIL, SITE_URL, CONTACT_PHONE, CONTACT_PHONE_DISPLAY } from '.
 import './App.css';
 
 const NAV = [
-  ['product', 'Product'],
+  ['ams', 'Solidcore AMS'],
   ['intelligence', 'Intelligence'],
   ['hub', 'The Hub'],
   ['plans', 'Plans'],
@@ -148,7 +148,7 @@ export default function App() {
               </Reveal>
 
               <Reveal className="hero-actions" delay={240}>
-                <a className="btn" href="#product">
+                <a className="btn" href="#ams">
                   Explore Solidcore AMS
                 </a>
                 <a className="btn btn--ghost" href="#app">
@@ -212,8 +212,8 @@ export default function App() {
           </div>
         </section>
 
-        {/* ═══════════ PRODUCT ═══════════ */}
-        <section className="shell sect" id="product">
+        {/* ═══════════ THE APP ═══════════ */}
+        <section className="shell sect" id="ams">
           <Reveal className="sect-head">
             <span className="kicker">01 — Flagship App</span>
             <h2>
@@ -296,10 +296,10 @@ export default function App() {
         {/* ═══════════ PLANS ═══════════ */}
         <section className="shell sect" id="plans">
           <Reveal className="sect-head">
-            <span className="kicker">04 — Plans</span>
-            <h2>Choose your level of support</h2>
+            <span className="kicker">04 — App Subscription</span>
+            <h2>Choose your subscription</h2>
             <p className="sect-lede">
-              Both plans run on Solidcore AMS and are billed annually, inclusive of GST. The
+              Each plan is an annual subscription to the Solidcore AMS app, inclusive of GST. The
               Bio-Lab plan adds full biomechanical assessment on top of everything in the
               Optimisation plan.
             </p>

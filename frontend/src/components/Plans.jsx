@@ -19,7 +19,7 @@ export const PLANS = [
     name: 'Athlete Optimisation Plan',
     price: '₹20,000',
     period: 'per year · incl. GST',
-    blurb: 'Core load management and recovery for athletes in season.',
+    blurb: 'Annual app subscription covering core load management and recovery for athletes in season.',
     features: BASE_FEATURES,
     extras: [],
   },
@@ -29,7 +29,7 @@ export const PLANS = [
     name: 'Solidcore Bio-Lab Plan',
     price: '₹25,000',
     period: 'per year · incl. GST',
-    blurb: 'Everything in the Optimisation plan, plus full biomechanical assessment.',
+    blurb: 'Annual app subscription with everything in the Optimisation plan, plus full biomechanical assessment.',
     features: BASE_FEATURES,
     extras: ['Postural Analysis', 'Corrective Measures', 'Running Mechanics', 'Bowling Analysis'],
   },
@@ -107,7 +107,7 @@ export default function Plans() {
         )}
 
         <a className="btn plan-cta" href="#contact">
-          Enquire about this plan
+          Enquire about this subscription
         </a>
       </div>
     </div>

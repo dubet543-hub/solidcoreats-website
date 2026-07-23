@@ -1,7 +1,7 @@
 # SOLIDCORE ATS — Promotional Portal
 
 Master promotional website for **SOLIDCORE ATS** (Athlete Training Seminary) and its flagship
-product **SOLIDCORE AMS** (Athlete Monitoring System). All copy comes from the ATS factsheet.
+app **SOLIDCORE AMS** (Athlete Monitoring System). All copy comes from the ATS factsheet.
 
 | Layer    | Stack              | Port  |
 | -------- | ------------------ | ----- |
@@ -144,7 +144,7 @@ frontend/
 
 ### Sections
 
-Hero · Mission & pillars · 01 Flagship App · 02 Platform Capabilities · 03 Value Proposition ·
+Hero · Mission & pillars · 01 Solidcore AMS · 02 Platform Capabilities · 03 Value Proposition ·
 04 Plans · 05 Athlete App · 06 Promoter & team · 07 Contact · Footer
 
 Plans are a tabbed switcher ([Plans.jsx](frontend/src/components/Plans.jsx)); the Bio-Lab plan is a
