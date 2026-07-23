@@ -1031,7 +1031,7 @@
 }
 .ftr-grid {
   display: grid;
-  grid-template-columns: 1.6fr 0.7fr 0.9fr;
+  grid-template-columns: 1.5fr 0.7fr 0.8fr 0.9fr;
   gap: 40px;
   padding-bottom: 44px;
 }
@@ -1059,7 +1059,7 @@
   margin-bottom: 4px;
 }
 .ftr-col a {
-  color: var(--steel-dim);
+  color: var(--slate);
   font-size: 0.9rem;
   transition: color 0.2s;
 }

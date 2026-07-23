@@ -469,6 +469,12 @@ export default function App() {
           </div>
 
           <div className="ftr-col">
+            <h2>Legal</h2>
+            <Link to="/terms">Terms &amp; Conditions</Link>
+            <Link to="/privacy">Privacy Policy</Link>
+          </div>
+
+          <div className="ftr-col">
             <h2>Contact</h2>
             <a href={`mailto:${SUPPORT_EMAIL}`}>{SUPPORT_EMAIL}</a>
             <a href={`tel:${CONTACT_PHONE}`}>{CONTACT_PHONE_DISPLAY}</a>
