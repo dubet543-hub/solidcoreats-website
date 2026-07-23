@@ -167,6 +167,26 @@ Verified: no horizontal overflow at 500/768/1024/1440, and heading levels run wi
 Note Chrome headless clamps to a 500px minimum window, so true phone widths (375-430px) still
 warrant a check on a real device.
 
+### Legal pages
+
+`/terms` and `/privacy` are React Router routes rendering shared markup from
+[legal/content.js](frontend/src/legal/content.js), linked from the footer. Clauses flagged
+`highlight: true` (medical disclaimer, tracking consent, liability cap) render in a bordered
+callout so they are not skimmed past.
+
+The five supplied clauses were **merged, not appended** — the medical disclaimer absorbed the old
+"Health & Fitness Disclaimer" and the liability cap absorbed the old "Limitation of Liability", so
+nothing is duplicated or contradicted.
+
+Because these are `BrowserRouter` paths, static hosts need a rewrite to `index.html`;
+`public/_redirects` (Netlify) and `vercel.json` cover the common cases.
+
+**App login gate.** [app-snippets/LegalGate.jsx](app-snippets/LegalGate.jsx) is a reference
+implementation of the one-time acceptance checkbox for the mobile app's login screen. It is not
+part of the website build — the app lives in a separate project. It starts unchecked, blocks
+sign-in until ticked, and records version + timestamp so consent is provable. Bump
+`ACCEPTED_VERSION` when the policies materially change to re-prompt everyone.
+
 ### Artwork
 
 Every illustration in [art.jsx](frontend/src/components/art.jsx) draws real AMS subject matter

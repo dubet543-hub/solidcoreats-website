@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import Logo from './components/Logo';
 import Reveal, { CountUp } from './components/Reveal';
 import ContactForm from './components/ContactForm';
@@ -480,7 +481,10 @@ export default function App() {
 
         <div className="shell ftr-base">
           <span>© {new Date().getFullYear()} SOLIDCORE ATS · Athlete Training Seminary</span>
-          <span>Sports Tech · Built for athletes and coaches</span>
+          <nav className="ftr-legal">
+            <Link to="/terms">Terms &amp; Conditions</Link>
+            <Link to="/privacy">Privacy Policy</Link>
+          </nav>
         </div>
       </footer>
     </>
