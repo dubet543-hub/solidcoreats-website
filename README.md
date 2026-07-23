@@ -48,19 +48,28 @@ npm run dev      # http://localhost:5173
 
 ## The logo
 
-The site looks for the official artwork at:
+Two assets, both cut from the supplied artwork with transparent backgrounds:
 
-```
-frontend/public/logo.png
-```
+| File | Used in |
+| ---- | ------- |
+| `frontend/public/logo-mark.png` | header, footer — mark beside live text |
+| `frontend/public/logo.png` | app section — full lockup, mark above wordmark |
 
-Drop the file there and every placement — header, footer, app section — picks it up on reload, no
-code change needed. Use a **transparent PNG**: the header and panels sit on slightly different
-darks, so a baked-in background shows as a visible rectangle.
+At 34px the wordmark baked into the artwork would be a few pixels tall and unreadable, so small
+placements pair the mark with real text instead.
 
-Until that file exists, [Logo.jsx](frontend/src/components/Logo.jsx) falls back to a layered vector
-interpretation of the infinity mark (gunmetal ribbon, chrome edge, teal core, travelling
-specular). The fallback is a stand-in, not the real brand asset.
+**How the cutout was made.** The source was a JPEG with the dark backdrop baked in (JPEG has no
+alpha). A brightness threshold does not work here: the loop holes measure the same as the backdrop,
+and parts of the ribbon are darker than it. So the backdrop is decided by *connectivity* — flood
+fill inward from the border, plus any large enclosed backdrop-coloured region — leaving dark detail
+inside the ribbon intact.
+
+The cut is tuned for this dark theme. It trims slightly into the ribbon's darkest edges, which is
+invisible against `#04070a` but would show on a light background. For light-background use, export
+a PNG with real transparency from the original design file.
+
+If either PNG is missing, [Logo.jsx](frontend/src/components/Logo.jsx) falls back to a layered
+vector interpretation of the mark.
 
 ## Checking the database connection
 
@@ -124,11 +133,12 @@ backend/
 frontend/
   src/
     components/
-      Logo.jsx        Official PNG with layered-vector fallback
+      Logo.jsx        Official PNGs with layered-vector fallback
       art.jsx         All content artwork (see below)
+      Plans.jsx       Tabbed service plans
       Reveal.jsx      Scroll reveal + CountUp
       ContactForm.jsx
-    constants.js      Support email, site URL
+    constants.js      Support email, phone, site URL
     App.jsx
 ```
 
