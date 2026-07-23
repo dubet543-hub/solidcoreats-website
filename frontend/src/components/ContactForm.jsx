@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { submitLead } from '../api';
-import { SUPPORT_EMAIL } from '../constants';
+import { SUPPORT_EMAIL, CONTACT_PHONE_DISPLAY } from '../constants';
 
 const EMPTY = { name: '', email: '', organisation: '', role: 'Athlete', message: '' };
 
@@ -18,7 +18,15 @@ export default function ContactForm() {
       setStatus({ type: 'ok', text: r.message });
       setForm(EMPTY);
     } catch (err) {
-      setStatus({ type: 'err', text: err.message });
+      // With no backend reachable the raw "Failed to fetch" tells a visitor
+      // nothing useful — point them at a channel that actually works.
+      const unreachable = err instanceof TypeError || /fetch/i.test(err.message);
+      setStatus({
+        type: 'err',
+        text: unreachable
+          ? `We couldn't submit the form just now. Please email ${SUPPORT_EMAIL} or call ${CONTACT_PHONE_DISPLAY} and we'll pick it up straight away.`
+          : err.message,
+      });
     }
   }
 

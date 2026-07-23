@@ -15,6 +15,7 @@ import {
   PlayBadge,
 } from './components/art';
 import { getFeatures } from './api';
+import { FEATURES } from './content/features';
 import { SUPPORT_EMAIL, SITE_URL, CONTACT_PHONE, CONTACT_PHONE_DISPLAY } from './constants';
 import './App.css';
 
@@ -72,14 +73,20 @@ function ScrollSpine() {
 }
 
 export default function App() {
-  const [features, setFeatures] = useState([]);
-  const [err, setErr] = useState(null);
+  // Bundled factsheet content renders immediately; the API only overrides it
+  // when one is actually reachable. A static deploy has no backend, so this
+  // must never depend on the fetch succeeding.
+  const [features, setFeatures] = useState(FEATURES);
   const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
     getFeatures()
-      .then((d) => setFeatures(d.features))
-      .catch((e) => setErr(e.message));
+      .then((d) => {
+        if (d.features?.length) setFeatures(d.features);
+      })
+      .catch(() => {
+        /* offline or no backend deployed — bundled content already shown */
+      });
   }, []);
 
   const cat = (c) => features.filter((f) => f.category === c);
@@ -247,8 +254,6 @@ export default function App() {
             <span className="kicker">02 — Platform Capabilities</span>
             <h2>Performance intelligence, not guesswork</h2>
           </Reveal>
-
-          {err && <p className="note note--err">Could not load capabilities: {err}</p>}
 
           <div className="feats">
             {featured.map((f, i) => {
