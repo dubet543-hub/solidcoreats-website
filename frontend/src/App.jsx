@@ -299,8 +299,9 @@ export default function App() {
             <span className="kicker">04 — Plans</span>
             <h2>Choose your level of support</h2>
             <p className="sect-lede">
-              Both plans run on Solidcore AMS. The Bio-Lab plan adds full biomechanical
-              assessment on top of everything in the Optimisation plan.
+              Both plans run on Solidcore AMS and are billed annually, inclusive of GST. The
+              Bio-Lab plan adds full biomechanical assessment on top of everything in the
+              Optimisation plan.
             </p>
           </Reveal>
 

@@ -18,6 +18,7 @@ export const PLANS = [
     tab: 'Athlete Optimisation',
     name: 'Athlete Optimisation Plan',
     price: '₹20,000',
+    period: 'per year · incl. GST',
     blurb: 'Core load management and recovery for athletes in season.',
     features: BASE_FEATURES,
     extras: [],
@@ -27,6 +28,7 @@ export const PLANS = [
     tab: 'Solidcore Bio-Lab',
     name: 'Solidcore Bio-Lab Plan',
     price: '₹25,000',
+    period: 'per year · incl. GST',
     blurb: 'Everything in the Optimisation plan, plus full biomechanical assessment.',
     features: BASE_FEATURES,
     extras: ['Postural Analysis', 'Corrective Measures', 'Running Mechanics', 'Bowling Analysis'],
@@ -62,7 +64,9 @@ export default function Plans() {
             onClick={() => setActive(i)}
           >
             <span className="plantab-name">{p.tab}</span>
-            <span className="plantab-price">{p.price}</span>
+            <span className="plantab-price">
+              {p.price} <em>/ year</em>
+            </span>
           </button>
         ))}
       </div>
@@ -81,6 +85,7 @@ export default function Plans() {
           </div>
           <div className="plan-price">
             <b>{plan.price}</b>
+            <span>{plan.period}</span>
           </div>
         </div>
 

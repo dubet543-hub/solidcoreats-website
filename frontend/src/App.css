@@ -731,6 +731,10 @@
   font-size: 0.8rem;
   color: var(--steel-dim);
 }
+.plantab-price em {
+  font-style: normal;
+  opacity: 0.75;
+}
 .plantab.is-active .plantab-price {
   color: var(--cyan);
 }
@@ -761,11 +765,24 @@
   max-width: 52ch;
   font-size: 0.95rem;
 }
+.plan-price {
+  text-align: right;
+}
 .plan-price b {
+  display: block;
   font-size: clamp(1.7rem, 3.4vw, 2.3rem);
   font-weight: 800;
   color: var(--cyan);
   white-space: nowrap;
+  line-height: 1.1;
+}
+.plan-price span {
+  display: block;
+  margin-top: 2px;
+  font-size: 0.76rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--steel-dim);
 }
 
 .plan-list {
