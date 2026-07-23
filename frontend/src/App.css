@@ -751,6 +751,40 @@
   background: rgba(4, 7, 10, 0.5);
 }
 
+/* ---------- direct contact ---------- */
+.reach {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 18px;
+  margin-bottom: 22px;
+}
+.reach-item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 20px 24px;
+  border: 1px solid var(--edge);
+  border-radius: var(--r);
+  background: linear-gradient(150deg, var(--carbon-2), var(--carbon));
+  transition: transform 0.28s var(--ease), border-color 0.28s;
+}
+.reach-item:hover {
+  transform: translateY(-3px);
+  border-color: rgba(79, 214, 232, 0.45);
+}
+.reach-label {
+  font-size: 0.7rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--steel-dim);
+}
+.reach-value {
+  font-size: 1.04rem;
+  font-weight: 700;
+  color: var(--cyan);
+  word-break: break-word;
+}
+
 /* ---------- form ---------- */
 .form {
   display: flex;

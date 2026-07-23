@@ -13,7 +13,7 @@ import {
   PlayBadge,
 } from './components/art';
 import { getFeatures } from './api';
-import { SUPPORT_EMAIL, SITE_URL } from './constants';
+import { SUPPORT_EMAIL, SITE_URL, CONTACT_PHONE, CONTACT_PHONE_DISPLAY } from './constants';
 import './App.css';
 
 const NAV = [
@@ -370,13 +370,21 @@ export default function App() {
             <span className="kicker">06 — Explore the Ecosystem</span>
             <h2>Power your training with SOLIDCORE</h2>
             <p className="sect-lede">
-              Tell us about your squad and we'll get you set up. Prefer email? Reach us at{' '}
-              <a className="ln" href={`mailto:${SUPPORT_EMAIL}`}>
-                {SUPPORT_EMAIL}
-              </a>
-              .
+              Tell us about your squad and we'll get you set up — or reach us directly.
             </p>
           </Reveal>
+
+          <Reveal className="reach" delay={60}>
+            <a className="reach-item" href={`mailto:${SUPPORT_EMAIL}`}>
+              <span className="reach-label">Email</span>
+              <span className="reach-value">{SUPPORT_EMAIL}</span>
+            </a>
+            <a className="reach-item" href={`tel:${CONTACT_PHONE}`}>
+              <span className="reach-label">Phone · Dr. Vinay Manwatkar</span>
+              <span className="reach-value">{CONTACT_PHONE_DISPLAY}</span>
+            </a>
+          </Reveal>
+
           <Reveal delay={90}>
             <ContactForm />
           </Reveal>
@@ -413,6 +421,7 @@ export default function App() {
           <div className="ftr-col">
             <h5>Contact</h5>
             <a href={`mailto:${SUPPORT_EMAIL}`}>{SUPPORT_EMAIL}</a>
+            <a href={`tel:${CONTACT_PHONE}`}>{CONTACT_PHONE_DISPLAY}</a>
             <a href={SITE_URL} target="_blank" rel="noreferrer">
               www.solidcoreats.com
             </a>
