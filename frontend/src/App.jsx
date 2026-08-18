@@ -130,6 +130,20 @@ export default function App() {
         </button>
       </header>
 
+      <div className="welcome-note">
+        <div className="shell welcome-note-inner">
+          <i className="welcome-note-dot" aria-hidden="true" />
+          <p>
+            <b>Welcome to SOLIDCORE ATS.</b> Right now, Solidcore ATS is built specifically for
+            cricket. While it works wonders for cricketers, it might not give athletes in other
+            sports the full monitoring experience they need just yet. We're working hard behind
+            the scenes to bring exciting upgrades for more sports soon — stay tuned. Until then,
+            we want to make sure you make the best choice for your training. Thank you so much
+            for your patience and support as we grow!
+          </p>
+        </div>
+      </div>
+
       <main id="top">
         {/* ═══════════ HERO ═══════════ */}
         <section className="hero">

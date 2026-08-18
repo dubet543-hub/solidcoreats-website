@@ -178,6 +178,35 @@
   box-shadow: none;
 }
 
+/* ---------- welcome note ---------- */
+.welcome-note {
+  background: rgba(240, 180, 41, 0.08);
+  border-bottom: 1px solid rgba(240, 180, 41, 0.25);
+}
+.welcome-note-inner {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 13px 0;
+}
+.welcome-note-dot {
+  flex: none;
+  width: 7px;
+  height: 7px;
+  margin-top: 7px;
+  border-radius: 50%;
+  background: var(--amber);
+}
+.welcome-note p {
+  margin: 0;
+  font-size: 0.86rem;
+  line-height: 1.6;
+  color: var(--steel);
+}
+.welcome-note p b {
+  color: var(--chrome);
+}
+
 /* ---------- hero ---------- */
 .hero {
   position: relative;
