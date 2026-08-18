@@ -188,10 +188,7 @@
   box-shadow: none;
 }
 
-/* ---------- welcome ticker ---------- */
-.welcome-ticker {
-  border-top: none;
-}
+/* ---------- welcome note ---------- */
 .welcome-block {
   background: rgba(8, 13, 19, 0.7);
   border-bottom: 1px solid var(--edge);
