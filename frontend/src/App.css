@@ -360,6 +360,9 @@
 .sect-head h2 {
   font-size: clamp(1.85rem, 4vw, 3.05rem);
 }
+.sect-logo {
+  margin: 6px 0 4px;
+}
 .sect-head h2 em {
   font-style: italic;
   background: linear-gradient(96deg, var(--cyan), var(--ice));
