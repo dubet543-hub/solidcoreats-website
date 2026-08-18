@@ -100,7 +100,11 @@ export default function App() {
 
       <header className={`hdr ${menuOpen ? 'is-open' : ''}`}>
         <a href="#top" className="hdr-brand" onClick={() => setMenuOpen(false)}>
-          <Logo size={34} animated />
+          <span className="logo">
+            <span className="logo-word">
+              SOLIDCORE<span className="logo-word-accent">ATS</span>
+            </span>
+          </span>
         </a>
 
         <nav className="hdr-nav" id="site-nav">
