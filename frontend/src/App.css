@@ -69,6 +69,13 @@
   margin-left: 0.42em;
   -webkit-text-fill-color: var(--cyan);
 }
+.logo-word-tm {
+  margin-left: 0.16em;
+  font-size: 0.55em;
+  font-style: normal;
+  font-weight: 600;
+  -webkit-text-fill-color: var(--steel-dim);
+}
 
 .mark-spark {
   stroke-dasharray: 40 760;
@@ -178,33 +185,9 @@
   box-shadow: none;
 }
 
-/* ---------- welcome note ---------- */
-.welcome-note {
-  background: rgba(240, 180, 41, 0.08);
-  border-bottom: 1px solid rgba(240, 180, 41, 0.25);
-}
-.welcome-note-inner {
-  display: flex;
-  align-items: flex-start;
-  gap: 12px;
-  padding: 13px 0;
-}
-.welcome-note-dot {
-  flex: none;
-  width: 7px;
-  height: 7px;
-  margin-top: 7px;
-  border-radius: 50%;
-  background: var(--amber);
-}
-.welcome-note p {
-  margin: 0;
-  font-size: 0.86rem;
-  line-height: 1.6;
-  color: var(--steel);
-}
-.welcome-note p b {
-  color: var(--chrome);
+/* ---------- welcome ticker ---------- */
+.welcome-ticker {
+  border-top: none;
 }
 
 /* ---------- hero ---------- */

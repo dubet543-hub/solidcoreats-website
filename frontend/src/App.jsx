@@ -103,6 +103,7 @@ export default function App() {
           <span className="logo">
             <span className="logo-word">
               SOLIDCORE<span className="logo-word-accent">ATS</span>
+              <sup className="logo-word-tm">™</sup>
             </span>
           </span>
         </a>
@@ -134,17 +135,14 @@ export default function App() {
         </button>
       </header>
 
-      <div className="welcome-note">
-        <div className="shell welcome-note-inner">
-          <i className="welcome-note-dot" aria-hidden="true" />
-          <p>
-            <b>Welcome to SOLIDCORE ATS.</b> Right now, Solidcore ATS is built specifically for
-            cricket. While it works wonders for cricketers, it might not give athletes in other
-            sports the full monitoring experience they need just yet. We're working hard behind
-            the scenes to bring exciting upgrades for more sports soon — stay tuned. Until then,
-            we want to make sure you make the best choice for your training. Thank you so much
-            for your patience and support as we grow!
-          </p>
+      <div className="ticker welcome-ticker" aria-label="Welcome to SOLIDCORE ATS">
+        <div className="ticker-run">
+          {Array.from({ length: 2 }).map((_, i) => (
+            <span key={i}>
+              WELCOME TO SOLIDCORE ATS <i>◆</i> CURRENTLY BUILT FOR CRICKET <i>◆</i> MORE SPORTS
+              COMING SOON <i>◆</i> THANK YOU FOR YOUR PATIENCE AND SUPPORT AS WE GROW <i>◆</i>{' '}
+            </span>
+          ))}
         </div>
       </div>
 
