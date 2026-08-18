@@ -135,8 +135,12 @@ export default function App() {
         </button>
       </header>
 
-      <div className="ticker welcome-ticker" aria-label="Welcome to SOLIDCORE ATS">
-        <div className="ticker-run">
+      <div
+        className="ticker welcome-ticker"
+        role="note"
+        aria-label="Welcome to SOLIDCORE ATS. Right now, Solidcore ATS is built specifically for cricket. While it works wonders for cricketers, it might not give athletes in other sports the full monitoring experience they need just yet. We're working hard behind the scenes to bring exciting upgrades for more sports soon — stay tuned. Until then, we want to make sure you make the best choice for your training. Thank you so much for your patience and support as we grow!"
+      >
+        <div className="ticker-run" aria-hidden="true">
           {Array.from({ length: 2 }).map((_, i) => (
             <span key={i}>
               WELCOME TO SOLIDCORE ATS <i>◆</i> CURRENTLY BUILT FOR CRICKET <i>◆</i> MORE SPORTS
