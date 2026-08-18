@@ -240,12 +240,7 @@ export default function App() {
         <section className="shell sect" id="ams">
           <Reveal className="sect-head">
             <span className="kicker">01 — Flagship App</span>
-            <div className="sect-logo-row">
-              <Logo size={58} wordmark={false} animated />
-              <h2>
-                Solidcore <em>AMS</em>
-              </h2>
-            </div>
+            <Logo className="sect-logo" size={110} lockup />
             <p className="sect-lede">
               The Athlete Monitoring System: an integrated performance analytics platform giving
               coaches and clinicians real-time data on every athlete, every day.

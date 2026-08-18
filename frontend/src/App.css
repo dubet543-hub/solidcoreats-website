@@ -360,10 +360,7 @@
 .sect-head h2 {
   font-size: clamp(1.85rem, 4vw, 3.05rem);
 }
-.sect-logo-row {
-  display: flex;
-  align-items: center;
-  gap: 16px;
+.sect-logo {
   margin: 6px 0 4px;
 }
 .sect-head h2 em {
