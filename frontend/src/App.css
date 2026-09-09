@@ -316,16 +316,15 @@
 }
 
 /* ---------- app screenshots ---------- */
-/* Cropped screenshots are all the same 9:19 phone ratio; showing the
-   full frame (object-fit: contain) rather than cropping it. */
+/* Screenshots vary slightly in their native ratio, so render each at its
+   own true proportions (height: auto) rather than forcing a fixed box —
+   forcing one caused an empty letterboxed gap under shorter images. */
 .art-shot {
   display: block;
   width: 100%;
-  aspect-ratio: 9 / 19;
+  height: auto;
   background: var(--carbon-2);
   border-radius: var(--r-sm);
-  object-fit: contain;
-  object-position: top center;
 }
 .art-shot--tall {
   border-radius: var(--r-lg);
