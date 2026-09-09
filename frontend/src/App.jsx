@@ -16,7 +16,13 @@ import {
 } from './components/art';
 import { getFeatures } from './api';
 import { FEATURES } from './content/features';
-import { SUPPORT_EMAIL, SITE_URL, CONTACT_PHONE, CONTACT_PHONE_DISPLAY } from './constants';
+import {
+  SUPPORT_EMAIL,
+  SITE_URL,
+  CONTACT_PHONE,
+  CONTACT_PHONE_DISPLAY,
+  PLAY_STORE_URL,
+} from './constants';
 import './App.css';
 
 const NAV = [
@@ -335,24 +341,30 @@ export default function App() {
             <div className="appcta-copy">
               <span className="kicker">05 — Athlete App</span>
               <h2>
-                Solidcore ATS™ is <em>coming soon</em> to mobile
+                Solidcore ATS™ is <em>live on Android</em>, iOS coming soon
               </h2>
               <p>
-                Cross-platform accessibility across iOS and Android, so athletes log sessions and
-                wellness in seconds — and staff see it instantly.
+                Athletes log sessions and wellness in seconds, and staff see it instantly. Get it
+                now on Google Play — the iOS app is on its way.
               </p>
 
               <div className="stores">
                 <a className="store" aria-label="App Store — coming soon">
                   <AppleBadge />
                 </a>
-                <a className="store" aria-label="Google Play — coming soon">
+                <a
+                  className="store"
+                  href={PLAY_STORE_URL}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label="Get Solidcore ATS on Google Play"
+                >
                   <PlayBadge />
                 </a>
               </div>
               <p className="stores-note">
-                <i className="soon-dot" /> Launching soon — request early access and we'll notify
-                you first.
+                <i className="soon-dot" /> iOS launching soon — request early access and we'll
+                notify you first.
               </p>
             </div>
             <Reveal className="appcta-art" variant="scale" delay={140}>
@@ -465,12 +477,18 @@ export default function App() {
               institutions.
             </p>
             <div className="ftr-stores">
-              <span className="store store--sm">
+              <span className="store store--sm" aria-label="App Store — coming soon">
                 <AppleBadge />
               </span>
-              <span className="store store--sm">
+              <a
+                className="store store--sm"
+                href={PLAY_STORE_URL}
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Get Solidcore ATS on Google Play"
+              >
                 <PlayBadge />
-              </span>
+              </a>
             </div>
           </div>
 

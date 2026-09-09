@@ -96,7 +96,7 @@ export function AppleBadge() {
 
 export function PlayBadge() {
   return (
-    <svg viewBox="0 0 160 52" className="store-badge" role="img" aria-label="Coming soon on Google Play">
+    <svg viewBox="0 0 160 52" className="store-badge" role="img" aria-label="Get it on Google Play">
       <rect x="0.6" y="0.6" width="158.8" height="50.8" rx="10" fill="#080f16" stroke="#2b3f4f" />
       <g transform="translate(16 13) scale(1.08)">
         <path d="M0.6 0.4a1.7 1.7 0 0 0-.6 1.3v20.6c0 .5.2 1 .6 1.3l11.5-11.6z" fill="#00d0ff" />
@@ -105,7 +105,7 @@ export function PlayBadge() {
         <path d="M16.3 16.4L2.3 23.8a1.5 1.5 0 0 1-1.7-.2L12.1 12z" fill="#ff3a44" />
       </g>
       <text x="48" y="22" fill="#8798a9" fontSize="8.5" fontFamily="Inter, sans-serif" letterSpacing="0.6">
-        Coming soon on
+        GET IT ON
       </text>
       <text x="48" y="38" fill="#e8eff6" fontSize="16" fontWeight="700" fontFamily="Inter, sans-serif">
         Google Play
