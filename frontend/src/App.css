@@ -476,6 +476,12 @@
 .split-art .art-shot {
   max-width: 300px;
 }
+.split-art .art-shot--admin {
+  /* the admin dashboard is a wide landscape screenshot, not a phone
+     portrait, so it needs far more width than the mobile view to stay
+     legible */
+  max-width: 560px;
+}
 
 /* ---------- dual mobile/admin switcher ---------- */
 .dual {

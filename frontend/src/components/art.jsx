@@ -93,7 +93,12 @@ export function DualInterface() {
           </button>
         ))}
       </div>
-      <img className="art art-shot" src={view.src} alt={view.alt} loading="lazy" />
+      <img
+        className={`art art-shot ${view.key === 'admin' ? 'art-shot--admin' : ''}`}
+        src={view.src}
+        alt={view.alt}
+        loading="lazy"
+      />
     </div>
   );
 }
