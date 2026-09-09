@@ -236,7 +236,7 @@
 
 .hero-grid {
   display: grid;
-  grid-template-columns: 1.02fr 0.98fr;
+  grid-template-columns: 0.86fr 1.14fr;
   gap: clamp(24px, 4vw, 60px);
   align-items: center;
   padding-bottom: clamp(30px, 3.6vw, 46px);
