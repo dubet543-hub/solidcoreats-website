@@ -314,22 +314,21 @@
 }
 
 /* ---------- app screenshots ---------- */
+/* Cropped screenshots are all the same 9:19 phone ratio; showing the
+   full frame (object-fit: contain) rather than cropping it. */
 .art-shot {
   display: block;
   width: 100%;
+  aspect-ratio: 9 / 19;
   background: var(--carbon-2);
   border-radius: var(--r-sm);
-  object-fit: cover;
+  object-fit: contain;
   object-position: top center;
 }
 .art-shot--tall {
-  aspect-ratio: 3 / 4;
   border-radius: var(--r-lg);
   border: 1px solid var(--edge);
   box-shadow: 0 30px 60px -30px rgba(0, 0, 0, 0.6);
-}
-.art-shot--wide {
-  aspect-ratio: 4 / 3;
 }
 
 /* ---------- ticker ---------- */

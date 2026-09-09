@@ -6,7 +6,7 @@
 function Screenshot({ src, alt, tall = false }) {
   return (
     <img
-      className={`art art-shot ${tall ? 'art-shot--tall' : 'art-shot--wide'}`}
+      className={`art art-shot ${tall ? 'art-shot--tall' : ''}`}
       src={src}
       alt={alt}
       loading="lazy"
