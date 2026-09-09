@@ -787,6 +787,21 @@
 .plantab.is-active .plantab-price {
   color: var(--cyan);
 }
+.plan-soon {
+  display: inline-block;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 0.6rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--amber);
+  background: rgba(240, 180, 41, 0.12);
+  border: 1px solid rgba(240, 180, 41, 0.35);
+  border-radius: 999px;
+  padding: 2px 8px;
+  margin-left: 9px;
+  vertical-align: middle;
+}
 
 .planpanel {
   padding: clamp(26px, 4vw, 42px);

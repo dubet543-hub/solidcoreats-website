@@ -32,6 +32,7 @@ export const PLANS = [
     blurb: 'Annual app subscription with everything in the Optimisation plan, plus full biomechanical assessment.',
     features: BASE_FEATURES,
     extras: ['Postural Analysis', 'Running Mechanics', 'Bowling Analysis'],
+    comingSoon: true,
   },
 ];
 
@@ -63,7 +64,10 @@ export default function Plans() {
             className={`plantab ${i === active ? 'is-active' : ''}`}
             onClick={() => setActive(i)}
           >
-            <span className="plantab-name">{p.tab}</span>
+            <span className="plantab-name">
+              {p.tab}
+              {p.comingSoon && <i className="plan-soon">Coming Soon</i>}
+            </span>
             <span className="plantab-price">
               {p.price} <em>/ year</em>
             </span>
@@ -80,7 +84,10 @@ export default function Plans() {
       >
         <div className="planpanel-head">
           <div>
-            <h3>{plan.name}</h3>
+            <h3>
+              {plan.name}
+              {plan.comingSoon && <i className="plan-soon">Coming Soon</i>}
+            </h3>
             <p className="plan-blurb">{plan.blurb}</p>
           </div>
           <div className="plan-price">
@@ -107,7 +114,7 @@ export default function Plans() {
         )}
 
         <a className="btn plan-cta" href="#contact">
-          Enquire about this subscription
+          {plan.comingSoon ? 'Join the waitlist' : 'Enquire about this subscription'}
         </a>
       </div>
     </div>
