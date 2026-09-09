@@ -29,8 +29,8 @@ export function HeroVisual() {
 export function ACWRGauge() {
   return (
     <Screenshot
-      src="/screens/acwr-trend.jpg"
-      alt="ACWR trend chart moving through under, sweet spot, caution and danger zones"
+      src="/screens/admin-analytics.png"
+      alt="Admin analytics: ACWR trend, load history and ACWR zone for an athlete"
     />
   );
 }
@@ -59,8 +59,8 @@ export function WellnessRadar() {
 export function DualInterface() {
   return (
     <Screenshot
-      src="/screens/recovery-trend.jpg"
-      alt="Readiness score and cumulative recovery score trend from the athlete app"
+      src="/screens/admin-overview.png"
+      alt="Admin dashboard overview: total athletes, total sessions and sessions per day"
     />
   );
 }
@@ -69,8 +69,8 @@ export function DualInterface() {
 export function ExportArt() {
   return (
     <Screenshot
-      src="/screens/daily-total-summary.jpg"
-      alt="Daily total load, exertion, ACWR and Z-score summary with the ACWR zone scale"
+      src="/screens/admin-workload.png"
+      alt="Admin workload monitor showing daily total load, exertion and ACWR danger zone"
     />
   );
 }
