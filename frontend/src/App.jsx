@@ -239,10 +239,10 @@ export default function App() {
         <section className="shell sect" id="ams">
           <Reveal className="sect-head">
             <span className="kicker">01 — Flagship App</span>
-            <Logo className="sect-logo" size={110} lockup />
+            <Logo className="sect-logo" size={150} lockup />
             <p className="sect-lede">
-              The Athlete Monitoring System: an integrated performance analytics platform giving
-              coaches and clinicians real-time data on every athlete, every day.
+              SOLIDCORE ATS™: an integrated performance analytics platform, enabling athletes to
+              monitor themselves using real-time data everyday.
             </p>
           </Reveal>
 
