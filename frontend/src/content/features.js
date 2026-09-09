@@ -101,7 +101,7 @@ export const FEATURES = [
   {
     key: 'admin-dashboard',
     title: 'Admin Dashboard (Web)',
-    description: 'Full squad oversight for the promoter, head coach and support staff.',
+    description: 'For Promoter Only.',
     category: 'ecosystem',
     order: 2,
   },

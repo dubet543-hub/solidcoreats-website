@@ -31,7 +31,7 @@ export const PLANS = [
     period: 'per year · incl. GST',
     blurb: 'Annual app subscription with everything in the Optimisation plan, plus full biomechanical assessment.',
     features: BASE_FEATURES,
-    extras: ['Postural Analysis', 'Corrective Measures', 'Running Mechanics', 'Bowling Analysis'],
+    extras: ['Postural Analysis', 'Running Mechanics', 'Bowling Analysis'],
   },
 ];
 

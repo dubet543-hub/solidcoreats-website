@@ -6,7 +6,8 @@ import { useState } from 'react';
  * Two assets, both cut out of the supplied artwork with transparent
  * backgrounds (see scripts note in README):
  *   /logo-mark.png  infinity mark on its own
- *   /logo.png       full lockup, mark above the SOLIDCORE AMS wordmark
+ *   /logo.png       full lockup, mark above the SOLIDCORE AMS wordmark (baked into
+ *                    the artwork itself — replace this asset to relabel it ATS)
  *
  * At small sizes the mark is paired with live text rather than the baked-in
  * wordmark, which would be only a few pixels tall and unreadable.
@@ -84,11 +85,12 @@ export default function Logo({
 
   if (missing) {
     return (
-      <span className={`logo ${className}`} aria-label="SOLIDCORE AMS">
+      <span className={`logo ${className}`} aria-label="SOLIDCORE ATS">
         <InfinityMark size={size} animated={animated} id={`lg${size}`} />
         {wordmark && !lockup && (
           <span className="logo-word">
-            SOLIDCORE<span className="logo-word-accent">AMS</span>
+            SOLIDCORE<span className="logo-word-accent">ATS</span>
+            <sup className="logo-word-tm">™</sup>
           </span>
         )}
       </span>
@@ -99,13 +101,14 @@ export default function Logo({
     <span className={`logo ${className}`}>
       <img
         src={lockup ? LOCKUP : MARK}
-        alt="SOLIDCORE AMS"
+        alt="SOLIDCORE ATS"
         style={{ height: size, width: 'auto' }}
         onError={() => setMissing(true)}
       />
       {wordmark && !lockup && (
         <span className="logo-word" aria-hidden="true">
-          SOLIDCORE<span className="logo-word-accent">AMS</span>
+          SOLIDCORE<span className="logo-word-accent">ATS</span>
+          <sup className="logo-word-tm">™</sup>
         </span>
       )}
     </span>

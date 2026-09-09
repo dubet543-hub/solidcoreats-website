@@ -26,7 +26,7 @@ export default function Legal({ title, intro, sections, docTitle }) {
           </svg>
         </Link>
         <span className="legal-bar-title">{title}</span>
-        <Link to="/" className="legal-bar-logo" aria-label="SOLIDCORE AMS home">
+        <Link to="/" className="legal-bar-logo" aria-label="SOLIDCORE ATS home">
           <Logo size={26} wordmark={false} />
         </Link>
       </header>

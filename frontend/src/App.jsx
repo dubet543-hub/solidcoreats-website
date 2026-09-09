@@ -20,7 +20,7 @@ import { SUPPORT_EMAIL, SITE_URL, CONTACT_PHONE, CONTACT_PHONE_DISPLAY } from '.
 import './App.css';
 
 const NAV = [
-  ['ams', 'Solidcore AMS'],
+  ['ams', 'Solidcore ATS™'],
   ['intelligence', 'Intelligence'],
   ['hub', 'The Hub'],
   ['plans', 'Plans'],
@@ -173,7 +173,7 @@ export default function App() {
 
               <Reveal className="hero-actions" delay={240}>
                 <a className="btn" href="#ams">
-                  Explore Solidcore AMS
+                  Explore Solidcore ATS™
                 </a>
                 <a className="btn btn--ghost" href="#app">
                   Get the App
@@ -184,7 +184,6 @@ export default function App() {
                 {[
                   ['Data-Driven', 100, '%'],
                   ['Manual Input Method', 100, '%'],
-                  ['Years of Field Research', 2, ''],
                 ].map(([l, v, s]) => (
                   <div className="stat" key={l}>
                     <b>
@@ -319,7 +318,7 @@ export default function App() {
             <span className="kicker">04 — App Subscription</span>
             <h2>Choose your subscription</h2>
             <p className="sect-lede">
-              Each plan is an annual subscription to the Solidcore AMS app, inclusive of GST. The
+              Each plan is an annual subscription to the Solidcore ATS™ app, inclusive of GST. The
               Bio-Lab plan adds full biomechanical assessment on top of everything in the
               Optimisation plan.
             </p>
@@ -336,7 +335,7 @@ export default function App() {
             <div className="appcta-copy">
               <span className="kicker">05 — Athlete App</span>
               <h2>
-                Solidcore AMS is <em>coming soon</em> to mobile
+                Solidcore ATS™ is <em>coming soon</em> to mobile
               </h2>
               <p>
                 Cross-platform accessibility across iOS and Android, so athletes log sessions and
@@ -379,9 +378,6 @@ export default function App() {
                   <b>10+</b> years in athlete workload &amp; wellness monitoring
                 </li>
                 <li>
-                  <b>VCA</b> Vidarbha Cricket Association, Nagpur
-                </li>
-                <li>
                   <b>2 yrs</b> field research with fast bowlers
                 </li>
               </ul>
@@ -396,12 +392,12 @@ export default function App() {
               <p>
                 Driven by a firm belief in empowering athletes through education — focusing on
                 self-awareness, long-term athletic development and the physical demands of elite
-                sport — he founded SOLIDCORE AMS. Two years of targeted field research with fast
+                sport — he founded SOLIDCORE ATS™. Two years of targeted field research with fast
                 bowlers led him to conceptualize and design the core framework for the SOLIDCORE
                 application.
               </p>
               <p>
-                At SOLIDCORE AMS he spearheads vision, product innovation and operations, advancing
+                At SOLIDCORE ATS™ he spearheads vision, product innovation and operations, advancing
                 the company's mission to help athletes achieve peak performance and sustainable
                 wellness through intelligent monitoring and education.
               </p>

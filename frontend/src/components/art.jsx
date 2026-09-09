@@ -1,5 +1,5 @@
 /**
- * Content-specific artwork. Every piece here draws real SOLIDCORE AMS
+ * Content-specific artwork. Every piece here draws real SOLIDCORE ATS
  * subject matter — ACWR ratios, session RPE, wellness check-ins, the
  * dual-interface hub — rather than decorative filler.
  */
@@ -7,7 +7,7 @@
 /* ---------- hero: athlete app + live data orbiting it ---------- */
 export function HeroVisual() {
   return (
-    <svg viewBox="0 0 520 520" className="art art-hero" role="img" aria-label="Solidcore AMS athlete app with live workload data">
+    <svg viewBox="0 0 520 520" className="art art-hero" role="img" aria-label="Solidcore ATS athlete app with live workload data">
       <defs>
         <linearGradient id="h-screen" x1="0" y1="0" x2="1" y2="1">
           <stop offset="0%" stopColor="#12202c" />
