@@ -470,6 +470,11 @@
   border: 1px solid var(--edge);
   border-radius: var(--r-lg);
   background: linear-gradient(150deg, var(--carbon-2), rgba(4, 7, 10, 0.4));
+  display: flex;
+  justify-content: center;
+}
+.split-art .art-shot {
+  max-width: 300px;
 }
 .line-item {
   padding: 22px 0;
@@ -512,9 +517,12 @@
   border-radius: var(--r-sm);
   padding: 14px;
   margin-bottom: 19px;
+  display: flex;
+  justify-content: center;
 }
 .feat-art .art {
   width: 100%;
+  max-width: 220px;
   height: auto;
 }
 .feat h3 {
