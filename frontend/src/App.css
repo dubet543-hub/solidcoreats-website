@@ -470,10 +470,50 @@
   border-radius: var(--r-lg);
   background: linear-gradient(150deg, var(--carbon-2), rgba(4, 7, 10, 0.4));
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 .split-art .art-shot {
   max-width: 300px;
+}
+
+/* ---------- dual mobile/admin switcher ---------- */
+.dual {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+}
+.dual-tabs {
+  display: inline-flex;
+  gap: 4px;
+  padding: 4px;
+  border: 1px solid var(--edge);
+  border-radius: 999px;
+  background: rgba(13, 20, 28, 0.6);
+}
+.dual-tab {
+  padding: 7px 22px;
+  border: none;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--slate);
+  font-size: 0.82rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background 0.25s, color 0.25s;
+}
+.dual-tab:hover {
+  color: var(--chrome);
+}
+.dual-tab.is-active {
+  background: linear-gradient(120deg, var(--cyan-deep), var(--cyan));
+  color: var(--ink);
+}
+.dual-tab:focus-visible {
+  outline: 2px solid var(--cyan);
+  outline-offset: 2px;
 }
 .line-item {
   padding: 22px 0;

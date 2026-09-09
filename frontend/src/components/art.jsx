@@ -1,3 +1,5 @@
+import { useState } from 'react';
+
 /**
  * App screenshots. These are real captures of the SOLIDCORE ATS app —
  * no illustrated/generated stand-ins — cropped to their top, most
@@ -29,8 +31,8 @@ export function HeroVisual() {
 export function ACWRGauge() {
   return (
     <Screenshot
-      src="/screens/admin-analytics.png"
-      alt="Admin analytics: ACWR trend, load history and ACWR zone for an athlete"
+      src="/screens/acwr-trend.jpg"
+      alt="ACWR trend chart moving through under, sweet spot, caution and danger zones"
     />
   );
 }
@@ -56,12 +58,43 @@ export function WellnessRadar() {
 }
 
 /* ---------- dual interface hub ---------- */
+const DUAL_VIEWS = [
+  {
+    key: 'mobile',
+    label: 'Mobile',
+    src: '/screens/home-overview.jpg',
+    alt: 'Athlete app home screen showing Performance, Recovery and Today rings',
+  },
+  {
+    key: 'admin',
+    label: 'Admin',
+    src: '/screens/admin-overview.png',
+    alt: 'Admin dashboard overview: total athletes, total sessions and sessions per day',
+  },
+];
+
 export function DualInterface() {
+  const [active, setActive] = useState(0);
+  const view = DUAL_VIEWS[active];
+
   return (
-    <Screenshot
-      src="/screens/admin-overview.png"
-      alt="Admin dashboard overview: total athletes, total sessions and sessions per day"
-    />
+    <div className="dual">
+      <div className="dual-tabs" role="tablist" aria-label="Athlete app or admin dashboard">
+        {DUAL_VIEWS.map((v, i) => (
+          <button
+            key={v.key}
+            type="button"
+            role="tab"
+            aria-selected={i === active}
+            className={`dual-tab ${i === active ? 'is-active' : ''}`}
+            onClick={() => setActive(i)}
+          >
+            {v.label}
+          </button>
+        ))}
+      </div>
+      <img className="art art-shot" src={view.src} alt={view.alt} loading="lazy" />
+    </div>
   );
 }
 
