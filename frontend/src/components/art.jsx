@@ -29,8 +29,8 @@ export function HeroVisual() {
 export function ACWRGauge() {
   return (
     <Screenshot
-      src="/screens/today-acwr.jpg"
-      alt="Today screen with Training, Skill and Total ACWR gauges in the Sweet Spot"
+      src="/screens/acwr-trend.jpg"
+      alt="ACWR trend chart moving through under, sweet spot, caution and danger zones"
     />
   );
 }
@@ -39,8 +39,8 @@ export function ACWRGauge() {
 export function LoadSplit() {
   return (
     <Screenshot
-      src="/screens/training-skill-split.jpg"
-      alt="Training and Skill load tracked separately with their own ACWR values"
+      src="/screens/training-skill-workload.jpg"
+      alt="Training Workload and Skill Workload tracked as separate trend charts"
     />
   );
 }
@@ -49,8 +49,8 @@ export function LoadSplit() {
 export function WellnessRadar() {
   return (
     <Screenshot
-      src="/screens/wellness-audit.jpg"
-      alt="Daily wellness check-in scores for wellness, muscle soreness and fatigue"
+      src="/screens/sleep-detail.jpg"
+      alt="Sleep summary with efficiency, sleep debt and a personalised recovery tip"
     />
   );
 }
@@ -59,8 +59,8 @@ export function WellnessRadar() {
 export function DualInterface() {
   return (
     <Screenshot
-      src="/screens/readiness-score.jpg"
-      alt="Readiness score and cumulative recovery score from the athlete app"
+      src="/screens/recovery-trend.jpg"
+      alt="Readiness score and cumulative recovery score trend from the athlete app"
     />
   );
 }
@@ -69,8 +69,8 @@ export function DualInterface() {
 export function ExportArt() {
   return (
     <Screenshot
-      src="/screens/sleep-summary.jpg"
-      alt="Sleep summary and sleep quality data logged in the athlete app"
+      src="/screens/daily-total-summary.jpg"
+      alt="Daily total load, exertion, ACWR and Z-score summary with the ACWR zone scale"
     />
   );
 }
